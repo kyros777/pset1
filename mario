@@ -1,0 +1,32 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main()
+{
+// prompt user for integer
+    int n;
+    do
+    {
+        n = get_int();
+// determines wether propmted is invalid
+    }
+    while (n < 0 || n > 23);
+
+    int height = 8;
+// outer loop for iteration of the height of half pyramid
+    for (int h = n; h < height; h++)
+    {
+// inner loop for spaces
+        for (int i = h + 2; i <= height; i++)
+        {
+            printf(" ");
+        }
+// inner loop for hashes
+        for (int j = h + 1; j >= 0; j--)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+
+}
